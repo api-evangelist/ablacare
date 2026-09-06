@@ -1,16 +1,28 @@
 aid: ablacare
 name: Ablacare
-description: 'Ablacare is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: AblaCare rebranded as May Health in September 2022 and now operates at mayhealth.com;
+  ablacare.com 301-redirects there. It is a clinical-stage medical device company headquartered in Paris,
+  France, founded in 2017 out of Sofinnova Partners' MD Start medtech acceleration program. The company
+  develops Ovarian Rebalancing, a one-time minimally invasive in-office procedure using ultrasound-guided
+  radiofrequency ablation of ovarian tissue to restore spontaneous ovulation in women with infertility
+  related to polycystic ovary syndrome (PCOS). It raised a EUR 10M Series A in 2019, a USD 25M Series B
+  co-led by Bpifrance and Trill Impact Ventures in 2024, and is running the randomized REBALANCE pivotal
+  study intended to support an FDA submission. It publishes no developer program, API or SDK.
 url: https://raw.githubusercontent.com/api-evangelist/ablacare/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-06'
 modified: '2026-09-06'
 tags:
+- Health Care
+- Medical Devices
+- Femtech
+- Fertility
+- Womens Health
+- Clinical Trials
+- Medtech
+- France
 - Company
 apis: []
 maintainers:
@@ -19,5 +31,47 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/ablacare-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/ablacare
+  url: https://mayhealth.com/
+- type: Support
+  url: https://mayhealth.com/contact-us/
+- type: TermsOfService
+  url: https://mayhealth.com/terms/
+- type: PrivacyPolicy
+  url: https://mayhealth.com/privacy-notice/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/may-health/
+image: https://mayhealth.com/wp-content/uploads/2023/07/cropped-favicon-512-192x192.png
+x-tier: profiled
+x-tier-reason: 'enrichment pass 2026-09-06: full contract discovery run, no public API surface found'
+x-enrichment:
+  date: '2026-09-06'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: 'AblaCare rebranded to May Health and sells a physician-delivered radiofrequency ablation
+    device, not software: ablacare.com 301s to mayhealth.com, a WordPress marketing site whose entire
+    nav is company/patients/healthcare-professionals/press/careers with no developer, docs or API path,
+    and whose only machine-readable surface is the stock WordPress core /wp-json CMS endpoint rather
+    than any product API.'
+  evidence:
+  - url: https://ablacare.com/
+    status: 301
+  - url: https://mayhealth.com/openapi.json
+    status: 404
+  - url: https://mayhealth.com/llms.txt
+    status: 404
+  - url: https://mayhealth.com/.well-known/api-catalog
+    status: 404
+  - url: https://mayhealth.com/.well-known/agent-card.json
+    status: 404
+  - url: https://api.github.com/orgs/mayhealth
+    status: 404
+  - url: https://registry.npmjs.org/mayhealth
+    status: 404
+  checked: '2026-09-06'

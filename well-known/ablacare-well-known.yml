@@ -1,0 +1,89 @@
+generated: '2026-09-06'
+method: probed
+source: 'live probe of https://mayhealth.com, https://www.mayhealth.com and https://ablacare.com'
+name: Ablacare well-known discovery documents
+description: >-
+  Probe of the RFC 8615 /.well-known/ namespace on every host this record knows. AblaCare now
+  operates as May Health; ablacare.com 301-redirects to mayhealth.com. There are no API baseURL
+  hosts and no OpenAPI servers[] hosts to probe, because the company publishes no API. Every
+  named path returned 404 (or a redirect to the apex), so NO WellKnown or SecurityTxt pointer is
+  emitted — this file records a measured absence, not a served surface.
+hosts:
+- host: mayhealth.com
+  note: primary company website (WordPress, WP Engine); apex answers 200
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: www.mayhealth.com
+  note: 301-redirects to the apex for every /.well-known path except security.txt, which 404s at the edge
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 301
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    file: null
+  - path: /.well-known/api-catalog
+    status: 301
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 301
+    file: null
+  - path: /.well-known/agent.json
+    status: 301
+    file: null
+- host: ablacare.com
+  note: legacy pre-rebrand domain; apex 301-redirects to https://mayhealth.com/
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+summary:
+  hosts_probed: 3
+  paths_probed: 21
+  documents_found: 0
+  agent_card_found: false
+  security_txt_found: false

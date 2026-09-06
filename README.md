@@ -64,5 +64,7 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Ablacare is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/ablacare
+AblaCare rebranded as May Health in September 2022 and now operates at mayhealth.com; ablacare.com 301-redirects there. It is a clinical-stage medical device company headquartered in Paris, France, founded in 2017 out of Sofinnova Partners' MD Start medtech acceleration program. The company develops Ovarian Rebalancing, a one-time minimally invasive in-office procedure using ultrasound-guided radiofrequency ablation of ovarian tissue to restore spontaneous ovulation in women with infertility related to polycystic ovary syndrome (PCOS). It raised a EUR 10M Series A in 2019, a USD 25M Series B co-led by Bpifrance and Trill Impact Ventures in 2024, and is running the randomized REBALANCE pivotal study intended to support an FDA submission. It publishes no developer program, API or SDK.
+
+- Website: https://mayhealth.com/
+- LinkedIn: https://www.linkedin.com/company/may-health/
